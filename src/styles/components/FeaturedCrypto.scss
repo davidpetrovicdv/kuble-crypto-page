@@ -1,0 +1,80 @@
+.featured-crypto {
+  & {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+
+    &__content {
+      background-color: #f4f5f6;
+      border-radius: 8px;
+
+      padding: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-gap: 24px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+
+      padding: 24px;
+      cursor: pointer;
+
+      transition: all 0.4s;
+
+      border-radius: 8px;
+
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0px 64px 64px -48px rgb(15 15 15 / 10%);
+      }
+    }
+
+    &__image {
+      width: 40px;
+      margin-bottom: 12px;
+    }
+
+    &__title-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 12px;
+      margin: 0;
+      margin-right: 12px;
+      color: #777e90;
+    }
+
+    &__change {
+      margin: 0;
+      border-radius: 12px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      background-color: rgb(88, 189, 125);
+      padding: 4px 8px;
+
+      &--red {
+        background-color: rgb(255, 104, 56);
+      }
+    }
+
+    &__current-amount {
+      font-size: 24px;
+      line-height: 1.33333;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin: 0;
+
+      &--sm {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.66667;
+      }
+    }
+  }
+}

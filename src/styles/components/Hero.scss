@@ -1,0 +1,45 @@
+.hero {
+  & {
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &__info {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &__info-content {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px 24px;
+    }
+
+    &__title {
+      font-size: 64px;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: rgb(35, 38, 47);
+      margin-bottom: 16px;
+    }
+
+    &__summary {
+      margin-bottom: 32px;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #777e90;
+    }
+
+    &__image {
+      img {
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+      }
+    }
+  }
+}

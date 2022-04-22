@@ -1,0 +1,73 @@
+.button {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #fff;
+  background-color: #39f;
+  padding: 12px 16px;
+  border-radius: 100px;
+  border: 1px solid #39f;
+  transition: all 0.2s;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(16, 122, 229);
+    border: 1px solid rgb(16, 122, 229);
+  }
+
+  &--outlined {
+    background-color: #fff;
+    color: rgb(16, 122, 229);
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    .button__tooltip {
+      visibility: visible;
+    }
+  }
+
+  &__tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    &--error-msg {
+      background-color: red;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+
+      border-bottom: 5px solid red;
+    }
+  }
+}
